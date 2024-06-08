@@ -6,13 +6,13 @@ interface CityListProps {
 }
 
 export const CityList = ({ cities, onCityClickHandler }: CityListProps) => {
-  const handleOnValueClick = (lat: number, lng: number) => () => {
+  const handleOnCityClick = (lat: number, lng: number) => () => {
     onCityClickHandler(lat, lng);
   };
   return (
     <ul className="list" data-testid="filtered-elements">
       {cities.map(({ name, lat, lng }) => (
-        <li key={`${lat}-${lng}`} onClick={handleOnValueClick(lat, lng)}>{name}</li>
+        <li key={`${lat}-${lng}`} onClick={handleOnCityClick(lat, lng)}>{name}</li>
       ))}
     </ul>
   );
