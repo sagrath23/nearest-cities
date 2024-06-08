@@ -11,4 +11,6 @@ describe('App tests', () => {
 
     expect(screen.getByText('Find a city')).toBeInTheDocument();
   });
+
+  
 });

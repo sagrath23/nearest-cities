@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Nearest Cities App
+
+This is a simple app to get nearest cities (based on latitude & longitude) of a selected city in a list.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
