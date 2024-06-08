@@ -32,6 +32,4 @@ describe('App tests', () => {
       expect(screen.getByText('Lynn Haven')).toBeInTheDocument();
     })
   });
-
-
 });
