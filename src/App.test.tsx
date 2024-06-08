@@ -10,7 +10,7 @@ describe('App tests', () => {
   it('should be rendered successfully', () => {
     render(<App />);
 
-    expect(screen.getByText('Find a city')).toBeInTheDocument();
+    expect(screen.getByText('Find a city:')).toBeInTheDocument();
   });
 
   describe('when user add text to input field', () => {
