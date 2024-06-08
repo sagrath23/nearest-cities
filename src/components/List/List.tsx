@@ -1,6 +1,8 @@
+import './List.css';
 import { type FormEvent, useState, useEffect } from 'react';
 import { City } from "../../types";
 import { getDistanceFromLatLonInKm } from '../../utils';
+
 
 interface ListProps {
   values: City[];
@@ -27,13 +29,13 @@ export const List = ({ values }: ListProps) => {
     <>
       <label htmlFor="search">Find a city</label>
       <input type="text" name="search" placeholder="type a city name" onChange={handleSearchTextChange} />
-      <ul data-testid="filtered-elements">
+      <ul className="list" data-testid="filtered-elements">
         {filteredValues.map(({ name, lat, lng }) => (
           <li key={`${lat}-${lng}`} onClick={handleOnValueClick(lat, lng)}>{name}</li>
         ))}
       </ul>
       <p>Nearest:</p>
-      <ul data-testid="nearest-elements">
+      <ul className="list" data-testid="nearest-elements">
         {nearestValues.map(({ name, lat, lng }) => (
           <li key={`${lat}-${lng}`}>{name}</li>
         ))}
